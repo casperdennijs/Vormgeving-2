@@ -1,5 +1,5 @@
-let lyricsP = document.querySelector("#lyrics");
-let playButton = document.querySelector("#play");
+let lyricsP = document.querySelector("#text");
+let playButton = document.querySelector("#button");
 
 let sec = 0;
 let playingStatus = 0;
@@ -34,38 +34,115 @@ function lyricsTimer() {
 
 function lyricsSync() {
     playButton.classList.add("hidden");
-    if (sec >= 4.5 && sec <= 6) {
-        lyricsP.textContent = "Look out for yourself";
-    } else if (sec >= 7 && sec <= 9.5) {
-        lyricsP.textContent = "I wake up to the sounds of the silence that allows";
-    } else if (sec >= 10 && sec <= 12.5) {
-        lyricsP.textContent = "For my mind to run around, with my ear up to the ground";
-    } else if (sec >= 13 && sec <= 15.5) {
-        lyricsP.textContent = "I'm searching to behold the stories that are told";
-    } else if (sec >= 16 && sec <= 18.5) {
-        lyricsP.textContent = "When my back is to the world that was smiling when I turned";
-    } else if (sec >= 19 && sec <= 24.5) {
-        lyricsP.textContent = "Tell you you're the greatest";
-    } else if (sec >= 25 && sec <= 30.5) {
-        lyricsP.textContent = "But once you turn, they hate us";
-    } else if (sec >= 32.5 && sec <= 34.5) {
-        lyricsP.textContent = "Oh, the misery";
-    } else if (sec >= 35 && sec <= 37.5) {
-        lyricsP.textContent = "Everybody wants to be my enemy";
-    } else if (sec >= 38 && sec <= 40.5) {
-        lyricsP.textContent = "Spare the sympathy";
-    } else if (sec >= 41 && sec <= 47) {
-        lyricsP.textContent = "Everybody wants to be my enemy-y-y-y-y";
-    } else if (sec >= 47.5 && sec <= 48.5) {
-        lyricsP.textContent = "(Look out for yourself)";
-    } else if (sec >= 49 && sec <= 53) {
-        lyricsP.textContent = "My enemy-y-y-y-y (Look, look, look, look)";
-    } else if (sec >= 53.5 && sec <= 54.5) {
-        lyricsP.textContent = "(Look out for yourself)";
-    } else if (sec >= 55 && sec <= 55.5) {
-        lyricsP.textContent = "But I'm ready";
-    } else {
-        lyricsP.textContent = "";
+    switch(sec) {
+        case 4.5:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "Look out for yourself";
+            break;
+        case 6: 
+            lyricsP.classList.remove("inspringen");
+            lyricsP.innerHTML = ""
+            break;
+        case 7:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "I wake up to the sounds of the silence that allows";
+            break;
+        case 9.5:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 10:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "For my mind to run around, with my ear up to the ground";
+            break;
+        case 12.5:
+            lyricsP.classList.remove("inspringen");
+            break;   
+        case 13:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "I'm searching to behold the stories that are told";
+            break;
+        case 15.5:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 16:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "When my back is to the world that was smiling when I turned";;
+            break;
+        case 18.5:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 19:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "Tell you you're the greatest";
+            break;
+        case 24.5:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 25:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "But once you turn, they hate us";
+            break;
+        case 31:
+            lyricsP.classList.remove("inspringen");
+            lyricsP.innerHTML = "";
+            break;
+        case 32.5:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "Oh, the misery";
+            break;
+        case 34.5:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 35:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "Everybody wants to be my <span id='enemy'>enemy</span>";
+            break;
+        case 37.5:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 38:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "Spare the sympathy";
+            break;
+        case 40.5:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 41:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "Everybody wants to be my <span id='enemy'>enemy-y-y-y-y</span>";
+            break;
+        case 47:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 47.5:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "(Look out for yourself)";
+            break;
+        case 48.5:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 49:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "My <span id='enemy'>enemy-y-y-y-y</span> (Look, look, look, look)";
+            break;
+        case 53:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 53.5:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "(Look out for yourself)";
+            break;
+        case 54.5:
+            lyricsP.classList.remove("inspringen");
+            break;
+        case 55:
+            lyricsP.classList.add("inspringen");
+            lyricsP.innerHTML = "But I'm ready";
+            break;
+        case 56:
+            lyricsP.classList.remove("inspringen");
+            lyricsP.innerHTML = "";
+            break;
     }
 }
 
