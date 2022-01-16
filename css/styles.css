@@ -11,36 +11,70 @@ html, body {
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 2em;
+    align-items: center;
     height: 100%;
-    background-image: url(../assets/background.jpg);
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(0deg, #880000, #000000, #000000, #880000);
+    background-size: 400% 400%;
+}
+
+.background-anim {
+    animation: background-anim 12s infinite;
+}
+
+@keyframes background-anim {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 main p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4em;
+    font-family: 'Carter One', cursive;
+    font-size: 3em;
     font-weight: 900;
     color: white;
     text-align: center;
     text-shadow: 2px 2px 2px #000000;
+    margin: 0;
+    width: 15em;
 }
 
 .hidden {
     display: none;
 }
 
-.inspringen {
-    animation: inspringen 1s;
+.inspringen-1 {
+    animation: inspringen 2.5s forwards;
+}
+
+.inspringen-2 {
+    animation: inspringen 2s forwards;
 }
 
 #enemy {
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     color: red;
     animation: enemy 1s infinite;
+}
+
+.title {
+    font-size: 4em;
+}
+
+@media screen and (max-width: 45em) {
+    main p {
+        font-size: 1.5em;
+    }
+    .title {
+        font-size: 2.5em;
+    }
 }
 
 @keyframes enemy {
@@ -55,19 +89,133 @@ main p {
     }
 }
 
-@media screen and (max-width: 40em) {
-    main p {
-      font-size: 2em;
-    }
-}
-
 @keyframes inspringen {
     0% {
         opacity: 0;
-        transform: translateY(20px)
+        transform: translateY(20px);
+        margin: 0 auto;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
     }
     100% {
-        opacity: 1;
+        opacity: 0;
         transform: translateY(0);
+        margin: 0 auto;
+    }
+}
+
+.text-1 {
+    animation: anim-1 2.5s forwards;
+    height: 98px; /* 2 regels */
+}
+
+.text-2 {
+    animation: anim-2 3s forwards;
+    height: 147px; /* 3 regels */
+}
+
+.text-3 {
+    animation: anim-1 3s forwards;
+    height: 147px; /* 3 regels */
+}
+
+.text-4 {
+    animation: anim-2 3s forwards;
+    height: 147px; /* 3 regels */
+}
+
+.text-5 {
+    animation: anim-1 3s forwards;
+    height: 196px; /* 4 regels */
+}
+
+.text-6 {
+    animation: anim-2 6s forwards;
+    height: 98px; /* 2 regels */
+}
+
+.text-7 {
+    animation: anim-1 6s forwards;
+    height: 98px; /* 2 regels */
+}
+
+.text-8 {
+    animation: anim-2 2.5s forwards;
+}
+
+.text-9 {
+    animation: anim-1 3s forwards;
+    height: 98px; /* 2 regels */
+}
+
+.text-10 {
+    animation: anim-2 3s forwards;
+}
+
+.text-11 {
+    animation: anim-1 6.5s forwards;
+    height: 98px; /* 2 regels */
+}
+
+.text-12 {
+    animation: anim-2 1.5s forwards;
+}
+
+.text-13 {
+    animation: anim-1 4.5s forwards;
+    height: 98px; /* 2 regels */
+}
+
+.text-14 {
+    animation: anim-2 1.5s forwards;
+}
+
+.text-15 {
+    animation: anim-1 .9s forwards;
+}
+
+@keyframes anim-1 {
+    0% {
+        text-align: left;
+        opacity: 0.25;
+        transform: translateY(-20px);
+    }
+    10% {
+        text-align: left;
+        opacity: 1;
+    }
+    90% {
+        text-align: left;
+        opacity: 1;
+    }
+    100% {
+        text-align: left;
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes anim-2 {
+    0% {
+        text-align: left;
+        opacity: 0.25;
+        transform: translateY(-20px);
+    }
+    10% {
+        text-align: left;
+        opacity: 1;
+    }
+    90% {
+        text-align: left;
+        opacity: 1;
+    }
+    100% {
+        text-align: left;
+        opacity: 0;
+        transform: translateY(0px);
     }
 }
